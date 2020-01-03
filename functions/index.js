@@ -21,7 +21,7 @@ exports.newMatch = functions.https.onRequest((req, resp) => {
     const payload = {
         data: {
             data_type: "new_match",
-            matched_user_id: request.matchedUserId
+            superhero_id: request.superheroId
         }
     };
 
@@ -52,7 +52,7 @@ exports.deleteMatch = functions.https.onRequest((req, resp) => {
     const payload = {
         data: {
             data_type: "delete_match",
-            matched_user_id: request.matchedUserId
+            superhero_id: request.superheroId
         }
     };
 
@@ -83,7 +83,7 @@ exports.newLike = functions.https.onRequest((req, resp) => {
     const payload = {
         data: {
             data_type: "new_like",
-            matched_user_id: request.matchedUserId
+            superhero_id: request.superheroId
         }
     };
 
@@ -113,7 +113,8 @@ exports.newMessage = functions.https.onRequest((req, resp) => {
 
     const payload = {
         data: {
-            data_type: "new_message"
+            data_type: "new_message",
+            superhero_id: request.superheroId
         }
     };
 
