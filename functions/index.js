@@ -26,6 +26,7 @@ exports.newMatch = functions.https.onRequest((req, resp) => {
 
     let options = {
       priority: "high",
+      content_available : true,
       timeToLive: 60 * 60 * 24
     };
 
@@ -55,6 +56,7 @@ exports.deleteMatch = functions.https.onRequest((req, resp) => {
     
     let options = {
       priority: "high",
+      content_available : true,
       timeToLive: 60 * 60 * 24
     };
 
@@ -113,6 +115,7 @@ exports.newMessage = functions.https.onRequest((req, resp) => {
 
     let options = {
       priority: "high",
+      content_available : true,
       timeToLive: 60 * 60 * 24
     };
 
